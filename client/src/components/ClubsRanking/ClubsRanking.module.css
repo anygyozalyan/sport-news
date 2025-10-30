@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap');
+
+.clubranking_section {
+    margin-top: 5rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.news_container {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    align-items: stretch;
+}
+
+.section_title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--color-main);
+}
+
+.recent_news {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.news_container {
+    height: 100%;
+    flex: 1;
+    align-items: stretch;
+}
+
+.image_wrapper {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 100%;
+}
+
+.image_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(112, 64, 5, 0.8));
+    color: #fff;
+    padding: 1rem;
+}
+
+.highlight_text {
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    opacity: 0.9;
+}
+
+.event_name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.news_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    background-color: var(--color-secondary);
+    border-radius: 0.5rem;
+    height: 100%;
+}
+
+.news_item {
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.news_item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--color-main);
+    cursor: pointer;
+}
+
+.news_item:last-child {
+    border-bottom: none;
+}
+
+.news_image {
+    width: 3.75rem;
+    height: 3.75rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    flex-shrink: 0;
+}
+
+.news_content {
+    flex: 1;
+    max-width: 13rem;
+}
+
+.news_tag {
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.news_title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.3;
+}
+
+.more_button {
+    padding: 0.7rem 1rem;
+    background-color: var(--color-fill);
+    color: #fff;
+    border-radius: 0.375rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.more_button:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--color-main);
+}
+
+/* Clubs Ranking */
+.club_rankings {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.table_container {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+    background: var(--color-secondary);
+    height: 100%;
+}
+
+.ranking_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.ranking_table th {
+    padding: 1rem 0.3125rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-main);
+    border-bottom: 0.125rem solid #dee2e6;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.ranking_table td {
+    padding: 1rem 0.3125rem;
+    text-align: center;
+    border-bottom: 0.0625rem solid #dee2e6;
+}
+
+.number {
+    font-weight: 600;
+}
+
+.club_cell {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    text-align: left;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.club_logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+
+.image_wrapper,
+.news_list {
+    height: 100%;
+}
+
+.ranking_table .gray_elem {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 64rem) {
+    .clubranking_section {
+        margin-top: 2rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    .news_container {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 48rem) {
+
+    .container {
+        gap: 1rem;
+    }
+
+    .news_container {
+        flex-direction: column;
+        gap: 1rem;
+        grid-template-columns: unset;
+    }
+
+    .section_title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .ranking_table {
+        font-size: 0.8rem;
+    }
+
+    .club_cell {
+        font-size: 0.75rem;
+    }
+
+    .club_logo {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .image_wrapper,
+    .news_list {
+        width: 100%;
+    }
+}
+
+@media (max-width: 30rem) {
+
+    .ranking_table th,
+    .ranking_table td {
+        padding: 0.46rem 0.15rem;
+    }
+
+    .more_button {
+        padding: 0.31rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .container {
+        gap: 0.46rem;
+    }
+
+    .news_container {
+        gap: 0.46rem;
+    }
+
+    .ranking_table {
+        font-size: 0.75rem;
+    }
+
+    .club_logo {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+
+}
+
+@media (max-width: 25.625rem) {
+    .table_container {
+        overflow-x: auto;
+    }
+
+    .ranking_table {
+        min-width: 37.5rem;
+    }
+}

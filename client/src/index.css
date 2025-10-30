@@ -1,0 +1,23 @@
+:root {
+  --color-main: #262626;
+  --color-main-60: rgba(26, 26, 26, 0.6);
+  --color-primary: #F9FAFC;
+  --color-secondary: #EBEEF3;
+  --color-tertiary: #E1E8F0;
+  --color-fill: #B8C2CE
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}

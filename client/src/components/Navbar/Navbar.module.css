@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.navbar {
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+    background-color: #fff;
+}
+
+.navbar_content {
+    width: 100%;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_list {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+.nav_button {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    line-height: 2.6rem;
+    color: var(--color-main-60);
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav_button:hover {
+    color: var(--color-main);
+    transform: translateY(-2px);
+}
+
+.active {
+    color: var(--color-main);
+    font-weight: bold;
+    transform: translateY(-2px);
+}
+
+.active::after {
+    width: 100%;
+}
+
+.burger_menu {
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.burger_menu:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+/* Mobile Menu */
+.mobile_menu_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.mobile_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #fff;
+    width: 17.5rem;
+    box-shadow: -0.3125rem 0 1.5625rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    z-index: 1001;
+    transform: translateX(100%);
+    animation: slideInRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile_menu_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile_menu_title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-main);
+}
+
+.close_icon {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.close_icon:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: rotate(90deg);
+}
+
+.mobile_menu_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.mobile_link {
+    cursor: pointer;
+    padding: 1rem 1.2rem;
+    border-radius: 0.8rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-size: 1rem;
+    color: var(--color-main-60);
+    border: none;
+    background: none;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile_link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.03), transparent);
+    transition: left 0.6s ease;
+}
+
+.mobile_link:hover::before {
+    left: 100%;
+}
+
+.mobile_link:hover {
+    color: var(--color-main);
+    transform: translateX(8px);
+}
+
+.mobile_link.active {
+    color: var(--color-main);
+    font-weight: bold;
+    transform: translateX(8px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.mobile_menu.closing {
+    animation: slideOutRight 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.mobile_menu_overlay.closing {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 60rem) {
+    .nav_list {
+        display: none;
+    }
+
+    .burger_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 30rem) {
+    .logo {
+        width: 8rem;
+    }
+
+    .mobile_menu {
+        width: 15.625rem;
+    }
+}
+
+@media (max-width: 21rem) {
+    .logo {
+        width: 6rem;
+    }
+
+    .mobile_menu {
+        width: 13.75rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .burger_menu {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap');
+
+.trendingNews_section {
+    background-color: var(--color-secondary);
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    border-radius: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.news_left_block {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.left_block_title {
+    font-size: 2rem;
+    font-weight: 450;
+    color: var(--color-main);
+    margin-bottom: 1.5rem;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.news_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    cursor: pointer;
+}
+
+.news_block:hover .news_content_title {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.news_block:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.news_block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.news_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+.news_content_date {
+    font-size: 0.875rem;
+    color: var(--color-main-60);
+    font-weight: 400;
+    margin: 0;
+}
+
+.news_content_title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-main);
+    margin: 0;
+    line-height: 1.4;
+    transition: all 0.3s;
+}
+
+.news_content_subtitle {
+    font-size: 0.875rem;
+    color: #696868;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Right Block */
+.news_right_block {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    height: 100%;
+}
+
+.news_right_block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+.news_right_block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.right_block_content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    z-index: 2;
+    color: white;
+}
+
+.cycling_title {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+    z-index: 2;
+    margin: 0;
+    opacity: 0.9;
+    border: 0.1rem solid #fff;
+    padding: 0.4rem 0.8rem;
+    letter-spacing: .1rem;
+}
+
+.right_block_date {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    margin: 0 0 0.8rem 0;
+    letter-spacing: .1rem;
+}
+
+.right_block_text {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1.1;
+}
+
+@media (max-width: 64rem) {
+    .trendingNews_section {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    .trendingNews_section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .news_right_block img {
+        height: 20rem;
+    }
+
+    .news_block {
+        align-items: start;
+    }
+
+    .news_content {
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 48rem) {
+
+    .news_left_block {
+        padding: 0;
+    }
+
+    .news_block {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .news_block img {
+        height: 12rem;
+    }
+
+    .left_block_title {
+        font-size: 1.75rem;
+    }
+
+
+}
+
+@media (max-width: 30rem) {
+    .trendingNews_section {
+        padding: 1rem;
+    }
+
+    .left_block_title {
+        font-size: 1.5rem;
+    }
+
+    .news_content_title {
+        font-size: 1rem;
+    }
+
+    .cycling_title {
+        font-size: 1rem;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .right_block_content {
+        padding: 1rem;
+    }
+
+    .right_block_text {
+        font-size: 1.125rem;
+    }
+}
