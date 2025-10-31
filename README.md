@@ -1,4 +1,4 @@
-# SPORTNEWS
+# SPORT NEWS
 
 **SPORTNEWS** is a responsive sports news website built with React / Vite. The project includes a homepage with multiple sections: news, club rankings, sports articles..., and functional components such as **Loading animation** and **Scroll to Top button**.
 
