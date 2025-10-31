@@ -7,7 +7,7 @@ import TrendingNewsBlock from './TrendingNewsBlock'
 
 function TrendingNews() {
     return (
-        <section className={styles.trendingNews_section}>
+        <section id='tranding-news' className={styles.trendingNews_section}>
 
             <div className={styles.news_left_block}>
                 <p className={styles.left_block_title}>Trending News</p>

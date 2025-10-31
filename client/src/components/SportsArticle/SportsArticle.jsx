@@ -40,7 +40,7 @@ function SportsArticle() {
     const slides = getCurrentSlides();
 
     return (
-        <section className={styles.sportsArticle_section}>
+        <section id='sports-article' className={styles.sportsArticle_section}>
             <p className={styles.sportsArticle_title}>Sports Article</p>
 
             <div className={styles.article_container}>

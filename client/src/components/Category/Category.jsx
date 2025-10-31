@@ -16,7 +16,7 @@ const categories = [
 
 function Category() {
     return (
-        <section className={styles.category_section}>
+        <section id='category' className={styles.category_section}>
             <p className={styles.category_title}>Category</p>
 
             <div className={styles.category_container}>

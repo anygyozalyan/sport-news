@@ -47,7 +47,7 @@ function RecentNews() {
     const goToSlide = (index) => setCurrentSlide(index)
 
     return (
-        <section className={styles.recentNews_section}>
+        <section id='recent-news' className={styles.recentNews_section}>
             <NewsSlide news={newsSlides[currentSlide]} />
             <SliderNavigation
                 currentSlide={currentSlide}

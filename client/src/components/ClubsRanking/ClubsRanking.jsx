@@ -29,7 +29,7 @@ function ClubsRanking() {
     ];
 
     return (
-        <section className={styles.clubranking_section}>
+        <section id='clubs-ranking' className={styles.clubranking_section}>
             <div className={styles.container}>
                 <RecentNews news={newsData} />
                 <ClubsTable clubs={clubsData} />

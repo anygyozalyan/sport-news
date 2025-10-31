@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap');
+
+.footer {
+    width: 100%;
+    min-height: 24rem;
+    background-color: var(--color-secondary);
+    padding: 2rem 2rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+    position: relative;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer_left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.footer_title {
+    font-size: clamp(3.5rem, 4vw, 4.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    max-width: 27rem;
+    line-height: 1.1;
+    background: linear-gradient(to right, #262626 0%, #B8C2CE 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    color: var(--color-main);
+}
+
+.input_block {
+    display: flex;
+    width: 100%;
+    max-width: 28rem;
+    border: 0.0625rem solid var(--color-main);
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.footer_input {
+    flex: 1;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    outline: none;
+    color: var(--color-main);
+}
+
+.input_button {
+    background-color: var(--color-main);
+    color: #fff;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer_image_block {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: visible;
+}
+
+.footer_image_block img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom right;
+    max-width: 100%;
+}
+
+.icons_block {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 2rem;
+    z-index: 10;
+}
+
+.icons_block img {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile_text {
+    display: none;
+}
+
+.input_button:hover {
+    background-color: var(--color-main-60);
+}
+
+@media (max-width: 64rem) {
+    .footer {
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+
+    .footer_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_left {
+        margin-top: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer_title {
+        max-width: 100%;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    .input_block {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .footer_image_block {
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .footer_image_block img {
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+    }
+}
+
+@media (max-width: 48rem) {
+    .footer_container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .footer_title {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .input_block {
+        max-width: 100%;
+    }
+
+    .footer_image_block img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center bottom;
+    }
+
+    .icons_block img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .footer {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    .footer_title {
+        font-size: clamp(1.5rem, 7vw, 2.5rem);
+    }
+
+    .input_block {
+        flex-direction: column;
+        max-width: 100%;
+        border: none;
+    }
+
+    .footer_input {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .input_button {
+        padding: 0.5rem 0;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .footer_image_block {
+        margin-top: 1rem;
+    }
+
+    .footer_image_block img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center bottom;
+    }
+
+    .icons_block {
+        padding-bottom: 0.7rem;
+    }
+
+    .icons_block img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .input_button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+    }
+
+    .mobile_text {
+        display: block;
+    }
+}
